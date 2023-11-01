@@ -4,7 +4,7 @@ import User from "./components/User"
 
 const friends = [
   {
-    id:1,
+    id: 1,
     name: "ahmet"
   },
   {
@@ -21,8 +21,14 @@ function App() {
 
   return (
     <div>
-      <User name="emir" surname="bakar" age={22} isLoggedIn={true} 
-        friends={friends} />
+      <User name="emir" surname="bakar" age={22}
+        isLoggedIn={true}
+        friends={friends}
+        address={{
+          title: "İstanbul",
+          zip: 34782
+        }}
+      />
     </div>
   )
 }
