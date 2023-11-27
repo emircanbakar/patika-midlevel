@@ -4,7 +4,7 @@ function Counter() {
     const [number, setNumber] = useState(0)
 
 
-    //herhangi bir state güncellendiği zaman useeffect ile yakalayabiliriz.
+    //bütün state güncellendiği zaman useEffect ile yakalayabiliriz, eğer dependency array ( [] ) varsa hangi stateye bakmak istediğimiz spesifikleşir.
     useEffect(() => {
         console.log("number state güncellendi")
     }, [number])
