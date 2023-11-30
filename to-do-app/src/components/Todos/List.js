@@ -15,13 +15,16 @@ function List({ todos, deleteTodo }) {
             <ul>
                 {todos.map((todo) => (
                     <li key={todo.id}>
-                        <input
-                            type="checkbox"
-                            checked={checkedTodos.includes(todo.id)}
-                            onChange={() => toggleTodo(todo.id)}
-                        />
+                        <div>
+                            <input
+                                type="checkbox"
+                                className='checkbox-input'
+                                checked={checkedTodos.includes(todo.id)}
+                                onChange={() => toggleTodo(todo.id)}
+                            />
+                        </div>
                         {todo.text}
-                        <button onClick={() => deleteTodo(todo.id)}>Sil</button>
+                        <button onClick={() => deleteTodo(todo.id)}>X</button>
                     </li>
                 ))}
             </ul>
