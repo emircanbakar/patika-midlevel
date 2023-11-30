@@ -18,8 +18,9 @@ function Add({ addTodo }) {
                     value={text}
                     onChange={(e) => setText(e.target.value)}
                     placeholder="Yeni görev ekle"
+                    className='todo-input'
                 />
-                <button type="submit">Ekle</button>
+                {/* <button type="submit">Ekle</button> */}
             </form>
         </div>
     )

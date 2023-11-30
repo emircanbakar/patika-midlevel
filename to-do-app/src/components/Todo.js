@@ -11,6 +11,7 @@ function Todo() {
     {
       text: "Learn React"
     },
+
   ])
   const addTodo = (text) => {
     setTodos((prevTodos) => [...prevTodos, { id: Date.now(), text: text }]);
@@ -21,10 +22,12 @@ function Todo() {
   }
 
   return (
-    <div className='container'>
+    <div>
       <h1>Todos</h1>
-      <Add addTodo={addTodo} />
-      <List todos={todos} deleteTodo={deleteTodo} />
+      <div className='container'>
+        <Add addTodo={addTodo} />
+        <List todos={todos} deleteTodo={deleteTodo} />
+      </div>
     </div>
   )
 }
