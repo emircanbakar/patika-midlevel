@@ -2,6 +2,31 @@
   text-align: center;
 }
 
-label{
+label {
   display: block;
+  font-size: 1.125rem;
+  margin: .25rem;
+}
+
+input {
+  width: 210px;
+  height: 24px;
+  font-size: 1rem;
+  border-radius: .375rem;
+  border: 2px solid #a0a0a0;
+  font-weight: 600;
+}
+
+button {
+  border: none;
+  background-color: blueviolet;
+  height: 40px;
+  width: 100px;
+  color: white;
+  border-radius: .75rem;
+  font-size: 1rem;
+}
+
+.errors {
+  color: red;
 }
