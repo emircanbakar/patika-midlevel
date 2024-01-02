@@ -8,7 +8,7 @@ function App() {
     <div className="App">
       {/* <Counter/> */}
       {/* App.test ile çalışmasın diye  */}
-      <a href="">Learn React</a>
+      <a href="#">Learn React</a>
       <br />
       <Todo />
     </div>
