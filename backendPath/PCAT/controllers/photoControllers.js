@@ -2,8 +2,21 @@ const Photo = require('../modals/Photo');
 const fs = require('fs');
 
 exports.getAllPhotos = async (req, res) => {
-  const photos = await Photo.find({}).sort('-dateCreated');
-  res.render('index', { photos });
+  const page = req.query.page || 1;
+  const photosPerPage = 2;
+  const totalPhotos = await Photo.find().countDocuments();
+  const photos = await Photo.find({})
+    .sort('-dateCreated')
+    .skip((page - 1) * photosPerPage)
+    .limit(photosPerPage);
+  res.render('index', {
+    photos,
+    current: page,
+    pages: Math.ceil(totalPhotos / photosPerPage),
+  });
+
+  // const photos = await Photo.find({}).sort('-dateCreated');
+  // res.render('index', { photos });
 };
 
 exports.getOnePhoto = async (req, res) => {
